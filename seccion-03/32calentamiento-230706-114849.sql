@@ -29,3 +29,7 @@ ORDER By followers DESC;
 --Seleccionar los paises con más población
 
 SELECT COUNT(*), country FROM users GROUP BY country HAVING COUNT(*) > 5 ORDER BY COUNT(*) DESC;
+
+
+
+--DISTINCT => Evita duplicados
