@@ -12,5 +12,8 @@ UPDATE users SET name = 'Katerino2' WHERE name = 'Katerino';
 SELECT * FROM users LIMIT 2;
 
 
+SELECT * FROM users WHERE name LIKE '_elissa%';
+
+
 
 -- auto commit;
