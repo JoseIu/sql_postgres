@@ -12,5 +12,20 @@ COUNT(*) AS total_users,
 MIN(followers) AS min_followers,
 MAX(followers) AS max_followers,
 ROUND(AVG(followers), 2) AS avg_followers,
- 
 FROM users;
+
+
+-- Seleccionamos el total de followers que hay entre 4500 y 4900
+SELECT COUNT(*), followers FROM users
+WHERE followers BETWEEN 4500 AND 4900 
+GROUP BY followers 
+ORDER By followers DESC;
+
+SELECT COUNT(*), followers FROM users
+WHERE followers < 1000 || followers > 5000 
+GROUP BY followers 
+ORDER By followers DESC;
+
+--Seleccionar los paises con más población
+
+SELECT COUNT(*), country FROM users GROUP BY country HAVING COUNT(*) > 5 ORDER BY COUNT(*) DESC;
