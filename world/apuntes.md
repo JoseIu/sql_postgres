@@ -19,3 +19,15 @@
     ## Si queremos modificar el check, porque queremos añadir más campos tenemos que eliminar el constraint
 
     - ALTER TABLE country DROP CONSTRAINT "country_continent_check";
+
+# ÍNDICES: se usa para que las consultas sean más rápidas, índices unico y índices no unicos
+
+    - Los índices unicos son más rápidos que los no unicos
+
+    - CREATE UNIQUE INDEX "unique_country_name" ON country (
+            name
+    );
+
+    - CREATE INDEX "country_continent" ON country(
+        continent
+    );
